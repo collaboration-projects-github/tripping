@@ -38,7 +38,7 @@ const getQuery = (
         : {}),
       ...(populateParam.strict
         ? {}
-        : { strictPopulate: true })
+        : { strictPopulate: false })
     };
 
     return populate;

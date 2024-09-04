@@ -5,7 +5,7 @@ import mongoose, { Mongoose } from "mongoose";
 const uri: string | undefined =
   process.env.TRIPPING_MONGODB_URI;
 const dbName: string | undefined =
-  process.env.TRIPPING_DB_NAME;
+  process.env.TRIPPING_MONGODB_DB_NAME;
 
 if (!uri) {
   throw new Error(

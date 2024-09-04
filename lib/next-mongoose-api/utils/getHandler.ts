@@ -67,10 +67,10 @@ const getHandler = <
     addDocuments,
     updateDocument,
     deleteDocument
-  } = getController<DocumentT, ModelT>(
+  } = getController<DocumentT, ModelT>({
     connection,
     Model
-  );
+  });
 
   return {
     getDocuments:

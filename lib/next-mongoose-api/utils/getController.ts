@@ -28,10 +28,13 @@ import { type SearchParams } from "../types/searchParam";
 const getController = <
   DocumentT extends Document,
   ModelT extends Model<DocumentT>
->(
-  connection: () => Promise<Mongoose>,
-  Model: ModelT
-) => ({
+>({
+  connection,
+  Model
+}: {
+  connection: () => Promise<Mongoose>;
+  Model: ModelT;
+}) => ({
   getDocuments: async (
     searchParams: SearchParams,
     sessionMiddleware?: SessionMiddleware<

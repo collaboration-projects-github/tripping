@@ -41,3 +41,12 @@ export const serverErrorResponse: Response<null> =
       ]
     }
   };
+
+export const unauthenticatedErrorResponse: Response<null> =
+  {
+    status: 401,
+    data: {
+      data: null,
+      messages: []
+    }
+  };
