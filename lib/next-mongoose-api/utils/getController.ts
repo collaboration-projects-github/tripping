@@ -54,6 +54,8 @@ const getController = <
       populate
     } = getQuery(searchParams);
 
+    console.log(filter);
+
     try {
       const [count, documents] =
         await withSession<[number, DocumentT[]]>(

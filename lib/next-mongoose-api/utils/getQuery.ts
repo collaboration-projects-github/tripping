@@ -75,12 +75,15 @@ const getQuery = (
                 searchParams.keyword === "true"
             }
           : {
-              [searchParams.filterBy]: {
-                $regex: new RegExp(
-                  searchParams.keyword || "",
-                  "i"
-                )
-              }
+              [searchParams.filterBy]: JSON.parse(
+                searchParams.keyword
+              )
+              // {
+              //     $regex: new RegExp(
+              //       searchParams.keyword || "",
+              //       "i"
+              //     )
+              //   }
             }
         : {}
       : {}),
